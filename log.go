@@ -32,7 +32,7 @@ type tracerConfig struct {
 }
 
 // Trace Конфигурация трассера
-var Trace *tracerConfig
+var Trace = new(tracerConfig)
 
 // LogInfo Логгировать информационное сообщение
 func LogInfo(s string) {
