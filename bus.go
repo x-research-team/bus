@@ -12,6 +12,7 @@ import (
 
 // Init Инициализация шин
 func Init(config json.RawMessage) {
+	Trace = new(tracerConfig)
 	if err := json.Unmarshal(config, Trace); err != nil {
 		log.Printf("[SYS] Logger are not initialized; Error: %v", err)
 	}
