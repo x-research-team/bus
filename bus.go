@@ -3,10 +3,7 @@ package bus
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
-	"path"
-	"path/filepath"
 	"time"
 
 	"github.com/google/uuid"
@@ -14,18 +11,8 @@ import (
 )
 
 // Init Инициализация шин
-func Init(config string) {
-	root, err := filepath.Abs("..")
-	if err != nil {
-		log.Printf("[SYS] Logger are not initialized; Error: %v", err)
-	}
-	loggerConfigBuffer, err := ioutil.ReadFile(path.Join(root, config))
-	if err != nil {
-		log.Printf("[SYS] Logger are not initialized; Error: %v", err)
-	}
-	log.Printf("[SYS] Logger config: %s", loggerConfigBuffer)
-	Trace = new(tracerConfig)
-	if err := json.Unmarshal(loggerConfigBuffer, Trace); err != nil {
+func Init(config json.RawMessage) {
+	if err := json.Unmarshal(config, Trace); err != nil {
 		log.Printf("[SYS] Logger are not initialized; Error: %v", err)
 	}
 	Sys = make(TSys)
