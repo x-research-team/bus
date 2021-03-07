@@ -39,9 +39,15 @@ type TSignal struct {
 
 // TMessage Сообщение для сигнала
 type TMessage struct {
+	id      uuid.UUID
 	route   string
 	command string
 	data    string
+}
+
+// ID Correlation ID for kernel message
+func (message TMessage) ID() uuid.UUID {
+	return message.id
 }
 
 // Route Путь сообщения
@@ -61,7 +67,7 @@ func (message TMessage) Data() string {
 
 // Message Сообщение в сигнале
 func Message(route, command, data string) *TMessage {
-	return &TMessage{route, command, data}
+	return &TMessage{uuid.New(), route, command, data}
 }
 
 // Signal Новый сигнал для магистрали

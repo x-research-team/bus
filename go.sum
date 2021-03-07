@@ -4,3 +4,5 @@ github.com/x-research-team/contract v0.0.0-20210130215307-f57ff7134700 h1:qDHRi1
 github.com/x-research-team/contract v0.0.0-20210130215307-f57ff7134700/go.mod h1:YL2rizKDbV/0962ebruBFLl71puijKzQqhzXiqRUljY=
 github.com/x-research-team/contract v0.0.0-20210304144252-d1a66fd39340 h1:oEiTgJ160YYTM6SGjAlYYbvgCctSMrmO1dQnHp+Q6ME=
 github.com/x-research-team/contract v0.0.0-20210304144252-d1a66fd39340/go.mod h1:ksn/gGTJ4DesIU/ASAnLibtgSabbBNSqFVrXT4+/+LQ=
+github.com/x-research-team/contract v0.0.0-20210307104512-9f60da0c3706 h1:b1KEHFtY4d9FTW8fsJkmwuDOVGNYGsYFeGBe2fDUCow=
+github.com/x-research-team/contract v0.0.0-20210307104512-9f60da0c3706/go.mod h1:tjCS2MZFtZmNpJNJYWQ2B/AEI2QJUHVDYG9JoDzYcoY=
