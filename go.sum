@@ -1,5 +1,7 @@
 github.com/google/uuid v1.2.0 h1:qJYtXnJRWmpe7m/3XlyhrsLrEURqHRM2kxzoxXqyUDs=
 github.com/google/uuid v1.2.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/x-research-team/contract v0.0.0-20210130215307-f57ff7134700 h1:qDHRi1jMgqwLICFVYR4tMi8Q4f6Tp0H2FwfB9HKqekk=
 github.com/x-research-team/contract v0.0.0-20210130215307-f57ff7134700/go.mod h1:YL2rizKDbV/0962ebruBFLl71puijKzQqhzXiqRUljY=
 github.com/x-research-team/contract v0.0.0-20210304144252-d1a66fd39340 h1:oEiTgJ160YYTM6SGjAlYYbvgCctSMrmO1dQnHp+Q6ME=
