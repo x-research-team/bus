@@ -1,10 +1,8 @@
 package route
 
 const (
-	// Queue Маршрут очереди Rabbit
-	Queue = "Queue"
-	// DataBase Маршрут к базе данных
+	Queue    = "Queue"
 	DataBase = "DataBase"
-	// Console Маршрут к командной строке
-	Console = "Console"
+	Console  = "Console"
+	Terminal = "Terminal"
 )

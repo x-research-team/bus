@@ -17,15 +17,21 @@ func Init() {
 // Sys Обработчик ошибок системного уровня
 func Sys() {
 	for true {
-		log.Printf("[SYS] %v\n", <-bus.Sys)
+		select {
+		case v := <-bus.Sys:
+			log.Printf("[SYS] %v\n", v)
+		}
 	}
 }
 
 // Error Обработчик шины ошибок
 func Error() {
 	for true {
-		if bus.Trace.Error {
-			log.Printf("[ERR] %v\n", <-bus.Error)
+		select {
+		case v := <-bus.Error:
+			if bus.Trace.Error {
+				log.Printf("[ERR] %v\n", v)
+			}
 		}
 	}
 }
@@ -33,8 +39,11 @@ func Error() {
 // Info Обработчик шины ошибок
 func Info() {
 	for true {
-		if bus.Trace.Info {
-			log.Printf("[INF] %v\n", <-bus.Info)
+		select {
+		case v := <-bus.Info:
+			if bus.Trace.Info {
+				log.Printf("[INF] %v\n", v)
+			}
 		}
 	}
 }
@@ -42,8 +51,11 @@ func Info() {
 // Debug Обработчик шины ошибок
 func Debug() {
 	for true {
-		if bus.Trace.Debug {
-			log.Printf("[DBG] %v\n", <-bus.Debug)
+		select {
+		case v := <-bus.Debug:
+			if bus.Trace.Debug {
+				log.Printf("[DBG] %v\n", v)
+			}
 		}
 	}
 }

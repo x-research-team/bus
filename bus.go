@@ -32,7 +32,7 @@ var Signals contract.ISignalsBus
 
 // TSignal Сигнал для магистрали биллинга
 type TSignal struct {
-	pid     string
+	pid     uuid.UUID
 	message contract.IMessage
 	channel contract.ISignalBus
 }
@@ -73,7 +73,7 @@ func Message(route, command, data string) *TMessage {
 // Signal Новый сигнал для магистрали
 func Signal(message contract.IMessage) contract.ISignal {
 	return &TSignal{
-		pid:     uuid.New().String(),
+		pid:     uuid.New(),
 		message: message,
 	}
 }
@@ -99,7 +99,7 @@ func (signal *TSignal) Send() error {
 
 // Pid c
 func (signal TSignal) Pid() string {
-	return signal.pid
+	return signal.pid.String()
 }
 
 // Name c
